@@ -35,18 +35,22 @@ flatpak install flathub org.gnome.Totem org.gnome.Cheese org.gnome.SoundRecorder
 - Draw IO for diagrams
 - Color picker to pick colors
 - GIMP for image manipulation
-- Handbrake for compacting video files
-- Piviti for simple video editing
 ```
-flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 org.gimp.GIMP fr.handbrake.ghb org.pitivi.Pitivi --user
+flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 org.gimp.GIMP --user
+```
+- Handbrake for compacting video files (optional)
+- Piviti for simple video editing (optional)
+```
+flatpak install flathub fr.handbrake.ghb org.pitivi.Pitivi --user
 ```
 
 ### Communication tools
 - Discord for friends chat
 - Gnome Geary as an email client
 - Feeds to read RSS feeds
+- Zoom for video communication
 ```
-flatpak install flathub com.discordapp.Discord org.gnome.Geary org.gabmus.gfeeds --user
+flatpak install flathub com.discordapp.Discord org.gnome.Geary org.gabmus.gfeeds us.zoom.Zoom --user
 ```
 
 ### Web Browsers
@@ -63,15 +67,49 @@ flatpak install flathub com.google.Chrome --user
 - Only Office as an Office Suite
 - Visual Studio Code - a fully featured code editor
 - Paper as a markdown based notes app
+- Foliate as an E-book reader
 ```
-flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper --user
+flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user
 ```
 ### Other tools
+- Gnome Pika Backup for hard drive backups
+- Gnome Maps as a map viewer
 - Bitwarden as a password management tool
 - Authenticator as an OTP app
 - Klavaro as a touch tiping tutor
 - Almond as a virtual assistant
+- IRPF to file taxes in Brazil
+- Metadata cleaner
+- Scans to PDF to add OCR funcionality and make PDFs searchable
 ```
-flatpak install flathub com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond --user
+flatpak install flathub org.gnome.World.PikaBackup org.gnome.Maps com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond br.gov.fazenda.receita.irpf fr.romainvigier.MetadataCleaner com.github.unrud.djpdf --user
+```
+## Snap apps
+- Authy as an OTP authenticator app with integration with Android (Can revoke android access)
+
+First install snap
+```
+# if on debian based distro
+sudo apt update
+sudo apt install snapd
+sudo snap install core
+
+# if on fedora
+sudo dnf install snapd
+sudo ln -s /var/lib/snapd/snap /snap
+```
+Then install the app
+```
+sudo snap install authy
+```
+
+## Distribution repository apps
+- Simple Scan for document scanning
+```
+# if on debian based distro
+sudo apt install simple-scan
+
+# if on fedora
+sudo dnf install simple-scan
 ```
 
