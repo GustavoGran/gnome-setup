@@ -2,6 +2,42 @@
 Repository for command line script to setup environment.
 Why in flatpak? To get the most up to date apps.
 
+## NVIDIA graphics
+Make sure your current dependencies are updated
+```
+sudo dnf upgrade --refresh -y
+```
+Enable free RPM Fusion repository (third party)
+```
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+
+Enable non free RPM Fusion repository (third party)
+```
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+Refresh the repository list
+```
+sudo dnf update --refresh
+```
+
+Install latest NVIDIA drivers
+```
+sudo dnf install akmod-nvidia -y
+```
+
+Install cuda drivers
+```
+sudo dnf install xorg-x11-drv-nvidia-cuda
+```
+
+Reboot the computer
+```
+reboot
+```
+
 ## Install and configure flatpak utilitary
 Install flatpak utilitary if the distribution doesn't bring flatpaks by default
 ```
@@ -9,10 +45,9 @@ Install flatpak utilitary if the distribution doesn't bring flatpaks by default
 sudo apt upate && sudo apt upgrade
 sudo apt install flatpak gnome-software-plugin-flatpak
 ```
-Add flathub as a remote repository for flatpaks
+Add flathub as a remote flatpaks repository for your user
 ```
-# May not be necessary on Fedora
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
 ```
 
 ## Install and configure main applications
@@ -28,7 +63,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 - Video Downloader to get that youtube videos
 - Amberoll to play offline music
 ```
-flatpak install flathub org.gnome.Totem org.gnome.Cheese org.gnome.SoundRecorder org.gnome.eog com.spotify.Client com.uploadedlobster.peek  com.obsproject.Studio com.github.unrud.VideoDownloader io.bassi.Amberol --user
+flatpak install flathub org.gnome.Totem org.gnome.Cheese org.gnome.SoundRecorder org.gnome.eog com.spotify.Client com.uploadedlobster.peek  com.obsproject.Studio com.github.unrud.VideoDownloader io.bassi.Amberol --user -y
 ```
 ### Audio, image and video editing tools
 - Inkscape for vector drawing
@@ -36,12 +71,12 @@ flatpak install flathub org.gnome.Totem org.gnome.Cheese org.gnome.SoundRecorder
 - Color picker to pick colors
 - GIMP for image manipulation
 ```
-flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 org.gimp.GIMP --user
+flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 org.gimp.GIMP --user -y
 ```
 - Handbrake for compacting video files (optional)
 - Piviti for simple video editing (optional)
 ```
-flatpak install flathub fr.handbrake.ghb org.pitivi.Pitivi --user
+flatpak install flathub fr.handbrake.ghb org.pitivi.Pitivi --user -y
 ```
 
 ### Communication tools
@@ -50,13 +85,13 @@ flatpak install flathub fr.handbrake.ghb org.pitivi.Pitivi --user
 - Feeds to read RSS feeds
 - Zoom for video communication
 ```
-flatpak install flathub com.discordapp.Discord org.gnome.Geary org.gabmus.gfeeds us.zoom.Zoom --user
+flatpak install flathub com.discordapp.Discord org.gnome.Geary org.gabmus.gfeeds us.zoom.Zoom --user -y
 ```
 
 ### Web Browsers
 - Google Chrome
 ```
-flatpak install flathub com.google.Chrome --user
+flatpak install flathub com.google.Chrome --user -y
 ```
 ### Productivity
 - Gnome Document Viewer (Evince)
@@ -69,7 +104,7 @@ flatpak install flathub com.google.Chrome --user
 - Paper as a markdown based notes app
 - Foliate as an E-book reader
 ```
-flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user
+flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user -y
 ```
 ### Other tools
 - Gnome Pika Backup for hard drive backups
@@ -78,11 +113,10 @@ flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum or
 - Authenticator as an OTP app
 - Klavaro as a touch tiping tutor
 - Almond as a virtual assistant
-- IRPF to file taxes in Brazil
 - Metadata cleaner
 - Scans to PDF to add OCR funcionality and make PDFs searchable
 ```
-flatpak install flathub org.gnome.World.PikaBackup org.gnome.Maps com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond br.gov.fazenda.receita.irpf fr.romainvigier.MetadataCleaner com.github.unrud.djpdf --user
+flatpak install flathub org.gnome.World.PikaBackup org.gnome.Maps com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond fr.romainvigier.MetadataCleaner com.github.unrud.djpdf --user -y
 ```
 ## Snap apps
 - Authy as an OTP authenticator app with integration with Android (Can revoke android access)
