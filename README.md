@@ -2,11 +2,31 @@
 Repository for command line script to setup environment.
 Why in flatpak? To get the most up to date apps.
 
-## NVIDIA graphics
-Make sure your current dependencies are updated
+## Remove default apps that come with fedora and will not be used
+- Rhythmbox
+- Boxes
+- LibreOffice
+```
+sudo dnf remove -y rhythmbox gnome-boxes
+sudo dnf remove -y libreoffice*
+sudo dnf autoremove -y
+sudo dnf remove -y  --duplicates
+sudo dnf remove -y --old-install-only
+```
+## Install core system repo apps
+Make sure your current apps and dependencies are updated
 ```
 sudo dnf upgrade --refresh -y
 ```
+- Gnome Sound Recorder to record sounds
+- Video Downloader to get that youtube videos
+- GIMP for image manipulation
+```
+sudo dnf install gnome-sound-recorder video-downloader gimp
+```
+
+## Install NVIDIA graphics drivers
+
 Enable free RPM Fusion repository (third party)
 ```
 sudo dnf install \
@@ -53,25 +73,20 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ## Install and configure main applications
 
 ### Audio, image and video players and recorders
-- Gnome Videos (Totem) as a video player
-- Gnome Cheese to take photos
-- Gnome Sound Recorder to record sounds
-- Gnome Image Viewer as an Image Viewer
 - Spotify for music streaming
 - Peek for screen recording GIFs
 - OBS Studio for screen and voice capture
-- Video Downloader to get that youtube videos
 - Amberoll to play offline music
 ```
-flatpak install flathub org.gnome.Totem org.gnome.Cheese org.gnome.SoundRecorder org.gnome.eog com.spotify.Client com.uploadedlobster.peek  com.obsproject.Studio com.github.unrud.VideoDownloader io.bassi.Amberol --user -y
+flatpak install flathub com.spotify.Client com.uploadedlobster.peek  com.obsproject.Studio io.bassi.Amberol --user -y
 ```
 ### Audio, image and video editing tools
 - Inkscape for vector drawing
 - Draw IO for diagrams
 - Color picker to pick colors
-- GIMP for image manipulation
+
 ```
-flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 org.gimp.GIMP --user -y
+flatpak install flathub org.inkscape.Inkscape com.jgraph.drawio.desktop nl.hjdskes.gcolor3 --user -y
 ```
 - Handbrake for compacting video files (optional)
 - Piviti for simple video editing (optional)
