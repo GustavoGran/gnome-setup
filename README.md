@@ -124,8 +124,6 @@ flatpak install flathub com.discordapp.Discord org.gnome.Geary org.gabmus.gfeeds
 flatpak install flathub com.google.Chrome --user -y
 ```
 ### Productivity
-- Gnome Document Viewer (Evince)
-- Gnome Calendar
 - Gnome Solanum: a pomodoro timer
 - Getting Things Gnome: a to do list
 - PDF Slicer to extract, merge and reorder PDFs
@@ -134,11 +132,10 @@ flatpak install flathub com.google.Chrome --user -y
 - Paper as a markdown based notes app
 - Foliate as an E-book reader
 ```
-flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user -y
+flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user -y
 ```
 ### Other tools
 - Gnome Pika Backup for hard drive backups
-- Gnome Maps as a map viewer
 - Bitwarden as a password management tool
 - Authenticator as an OTP app
 - Klavaro as a touch tiping tutor
@@ -146,7 +143,7 @@ flatpak install flathub org.gnome.Evince org.gnome.Calendar org.gnome.Solanum or
 - Metadata cleaner
 - Scans to PDF to add OCR funcionality and make PDFs searchable
 ```
-flatpak install flathub org.gnome.World.PikaBackup org.gnome.Maps com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond fr.romainvigier.MetadataCleaner com.github.unrud.djpdf --user -y
+flatpak install flathub org.gnome.World.PikaBackup com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro edu.stanford.Almond fr.romainvigier.MetadataCleaner com.github.unrud.djpdf --user -y
 ```
 ## Snap apps
 - Authy as an OTP authenticator app with integration with Android (Can revoke android access)
