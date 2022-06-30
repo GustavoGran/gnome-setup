@@ -5,23 +5,18 @@ Why in flatpak? To get the most up to date apps.
 ## Fix Fedora Bluetooth
 [Fedora Wiki: How to Debug Bluetooth Problems](https://fedoraproject.org/wiki/How_to_debug_Bluetooth_problems)
 
-Check if hardware is ok
+Instal bluez and tools
 ```
-# Check for 'UP RUNNING'
-hciconfig
-
-# If not up
-hciconfig up
+sudo dnf intstall bluez bluez-tools
 ```
-Check if daemon is running and restart it if not
+Enable and start bluetooth daemon
 ```
-systemctl status bluetooth
-
-systemctl --global --user is-enabled obex
-
-sudo systemctl --user enable bluetooth.service
+sudo systemctl enable bluetooth.service
 ```
-
+Start bluetooth
+```
+sudo systemctl start bluetooth.service
+```
 
 ## Remove default apps that come with fedora and will not be used
 - Rhythmbox
