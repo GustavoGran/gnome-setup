@@ -2,6 +2,27 @@
 Repository for command line script to setup environment.
 Why in flatpak? To get the most up to date apps.
 
+## Fix Fedora Bluetooth
+[Fedora Wiki: How to Debug Bluetooth Problems](https://fedoraproject.org/wiki/How_to_debug_Bluetooth_problems)
+
+Check if hardware is ok
+```
+# Check for 'UP RUNNING'
+hciconfig
+
+# If not up
+hciconfig up
+```
+Check if daemon is running and restart it if not
+```
+systemctl status bluetooth
+
+systemctl --global --user is-enabled obex
+
+sudo systemctl --user enable bluetooth.service
+```
+
+
 ## Remove default apps that come with fedora and will not be used
 - Rhythmbox
 - Boxes
