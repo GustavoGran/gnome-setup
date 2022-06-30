@@ -27,7 +27,6 @@ sudo dnf remove -y rhythmbox gnome-boxes
 sudo dnf remove -y libreoffice*
 sudo dnf autoremove -y
 sudo dnf remove -y  --duplicates
-sudo dnf remove -y --old-install-only
 ```
 ## Install core system repo apps
 Make sure your current apps and dependencies are updated
