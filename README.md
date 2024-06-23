@@ -74,7 +74,7 @@ flatpak install flathub com.google.Chrome org.mozilla.firefox --user -y
 - Klavaro as a touch tiping tutor
 - Scans to PDF to add OCR funcionality and make PDFs searchable
 ```
-flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro com.github.unrud.djpdf --user -y
+flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper com.github.johnfactotum.Foliate com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro com.github.unrud.djpdf --user -y
 ```
 
 ## Snap apps
