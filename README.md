@@ -14,7 +14,7 @@ sudo apt update
 ```
 Then upgrade them
 ```
-sudo apt update -y
+sudo apt upgrade -y
 ```
 
 ## Install NVIDIA graphics drivers
