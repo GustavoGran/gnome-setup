@@ -108,4 +108,5 @@ sudo dnf install simple-scan
 
 ## Set the US Intl keyboard
 [https://github.com/raelgc/win_us_intl/](https://github.com/raelgc/win_us_intl/)
+[https://askubuntu.com/questions/875688/how-to-install-usa-international-keyboard-option-on-ubuntu-gnome-16-10](https://askubuntu.com/questions/875688/how-to-install-usa-international-keyboard-option-on-ubuntu-gnome-16-10)
 ## Setup for gaming
