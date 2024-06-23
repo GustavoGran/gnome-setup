@@ -109,4 +109,13 @@ sudo dnf install simple-scan
 ## Set the US Intl keyboard
 [https://github.com/raelgc/win_us_intl/](https://github.com/raelgc/win_us_intl/)
 [https://askubuntu.com/questions/875688/how-to-install-usa-international-keyboard-option-on-ubuntu-gnome-16-10](https://askubuntu.com/questions/875688/how-to-install-usa-international-keyboard-option-on-ubuntu-gnome-16-10)
+[https://forums.linuxmint.com/viewtopic.php?t=329552](https://forums.linuxmint.com/viewtopic.php?t=329552)
+
 ## Setup for gaming
+[https://diolinux.com.br/games/aprenda-deixar-o-ubuntu-e-o-linux-mint.html](https://diolinux.com.br/games/aprenda-deixar-o-ubuntu-e-o-linux-mint.html)
+Se você pretende usar o Steamplay, só a instalação dos drivers adequado já deve ser o suficiente, porém, se deseja utilizar uma ferramenta como o Lutris para rodar games de outras lojas, ainda que o Lutris se encarregue de fazer todos os ajustes geralmente, para aumentar o nível de compatibilidade é possível instalar alguns complementos ao Wine nativo do seu sistema.   Primeiro precisamos habilitar o suporte para arquitetura de 32 bits, isso é fácil de fazer vamos abrir o terminal e digitar (ou colar) o seguinte comando:  
+```
+sudo dpkg --add-architecture i386
+```
+Agora vamos instalar o Wine-Stable pelo Synaptic e procurar por esses pacotes lá:   **wine-stable (3.0-1ubuntu1) ; libwine (3.0-1ubuntu1) ; libwine-development (3.6-1) ; wine64 (3.0-1ubuntu1) ; wine64-development (3.6-1) ; wineprefix e fonts-wine**   No caso do Linux Mint, você também pode procurar diretamente na loja de aplicativos, não precisando do Synaptic necessariamente, no Ubuntu, obrigatoriamente será necessário usar o Synpatic, ou então usar o terminal para instalar cada um dos pacotes usando o “apt”.Agora vamos conferir se os pacotes do Vulkan estão instalados, se você estiver usando Nvidia, ao instalar o driver, o suporte à Vulkan é ativado, não sendo necessário outras medidas.
+
