@@ -105,4 +105,7 @@ sudo apt install simple-scan gimp -y
 # if on fedora
 sudo dnf install simple-scan
 ```
+
+## Set the US Intl keyboard
+[https://github.com/raelgc/win_us_intl/](https://github.com/raelgc/win_us_intl/)
 ## Setup for gaming
