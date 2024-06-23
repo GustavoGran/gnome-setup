@@ -70,7 +70,7 @@ flatpak install flathub com.google.Chrome org.mozilla.firefox --user -y
 - Paper as a markdown based notes app
 - Foliate as an E-book reader
 ```
-flatpak install flathub  --user -y
+flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user -y
 ```
 ### Other tools
 - Bitwarden as a password management tool
