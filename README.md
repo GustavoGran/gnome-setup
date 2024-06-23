@@ -100,7 +100,7 @@ sudo snap install authy
 - Simple Scan for document scanning
 ```
 # if on debian based distro
-sudo apt install simple-scan
+sudo apt install simple-scan gimp -y
 
 # if on fedora
 sudo dnf install simple-scan
