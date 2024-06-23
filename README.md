@@ -69,17 +69,14 @@ flatpak install flathub com.google.Chrome org.mozilla.firefox --user -y
 - Visual Studio Code - a fully featured code editor
 - Paper as a markdown based notes app
 - Foliate as an E-book reader
-```
-flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate --user -y
-```
-### Other tools
 - Bitwarden as a password management tool
 - Authenticator as an OTP app
 - Klavaro as a touch tiping tutor
 - Scans to PDF to add OCR funcionality and make PDFs searchable
 ```
-flatpak install flathub com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro com.github.unrud.djpdf --user -y
+flatpak install flathub org.gnome.Solanum org.gnome.GTG com.github.junrrein.PDFSlicer org.onlyoffice.desktopeditors com.visualstudio.code  io.posidon.Paper flatpak install flathub com.github.johnfactotum.Foliate com.bitwarden.desktop com.belmoussaoui.Authenticator net.sourceforge.Klavaro com.github.unrud.djpdf --user -y
 ```
+
 ## Snap apps
 - Authy as an OTP authenticator app with integration with Android (Can revoke android access)
 
